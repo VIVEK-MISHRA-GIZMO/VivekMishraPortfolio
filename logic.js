@@ -1,0 +1,46 @@
+const textArray=["Software Developer","Web Developer","Freelancer","Youtuber"]
+const typingDelay=100;
+const erasingDelay=50;
+const newTextDelay=1000;
+let textArrayIndex=0;
+let charIndex=0;
+const typeTextSpan=document.getElementById('typed-text');
+// const cursorSpan=document.querySelector(".cursor");
+console.log("hellow")
+
+function type(){
+    if(charIndex<textArray[textArrayIndex].length)
+    {
+        //   if(!cursorSpan.classList.contains("typing"))
+        //   cursorSpan.classList.add('typing')
+          typeTextSpan.textContent+=textArray[textArrayIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(type,typingDelay);
+    }
+    else
+    // { cursorSpan.classList.remove("typing");
+        setTimeout(erase,newTextDelay);
+    }
+
+
+function erase()
+{
+    if(charIndex>0)
+     {
+        // if(!cursorSpan.classList.contains("typing"))
+        // cursorSpan.classList.add('typing')
+        typeTextSpan.textContent=textArray[textArrayIndex].substring(0,charIndex-1);
+        charIndex--;
+        setTimeout(erase,erasingDelay);
+     }
+     else{
+        // cursorSpan.classList.remove("typing");
+         textArrayIndex++;
+         if(textArrayIndex>=textArray.length)
+         textArrayIndex=0;
+         setTimeout(type,typingDelay+250);
+     }
+}
+document.addEventListener('DOMContentLoaded',function(){
+    setTimeout(type,typingDelay+250);
+})

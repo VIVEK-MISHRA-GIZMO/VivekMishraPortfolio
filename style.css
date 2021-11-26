@@ -1,0 +1,92 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@800&family=Mochiy+Pop+P+One&family=Montserrat:wght@600&family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    display: flex;
+}
+.right {
+    background-color: black;
+    
+    min-height: 92vh;
+    width: 50%;
+}
+
+.left {
+    width: 50%;
+    min-height: 92vh;
+    color: white;
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.left h2{
+    font-size: 3rem;
+    color: white;
+}
+section .left h1 .name{
+    font-size: 3rem;
+    font-family: ubuntu,sans-serif;;
+}
+
+h3 {
+    font-family: ubuntu,sans-serif;
+    font-size: 1.8rem;
+}
+
+.name {
+    font-family: ubuntu,sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.changing.animation {
+    font-size: 3rem;
+    font-family: ubuntu,sans-serif;
+    /* font-weight: 800; */
+    margin-left: .8rem;
+    color: red;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+.change{
+    display: flex;
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+
+.right
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right img{
+    min-height: 90vh;
+}
+
+@media (max-width:1100px) {
+    
+    .descp{
+        display: block;
+        margin: auto;
+        /* text-align: center; */
+        
+    }
+    .left{
+        width: 100%;
+        font-size: 5rem;
+    }
+    .right{
+       display: none;
+    }
+
+    
+}
